@@ -1,3 +1,17 @@
+body {
+  background-color: #F9F9F9;
+}
 
+.clock {
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  background-color: #fff;
+  filter: drop-shadow(0 0 2px pink);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /*# sourceMappingURL=style.css.map */
