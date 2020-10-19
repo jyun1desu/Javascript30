@@ -5,6 +5,7 @@ const hourPoint = document.querySelector('.clock__hour');
 
 function setTime() {
     const now = new Date();
+    //秒針
     const second = now.getSeconds();
     let secondDegree = second * 6;
     secondPoint.style.transform = `rotate(${secondDegree}deg)`;
@@ -18,7 +19,6 @@ function setTime() {
         }, 50)
     }
 
-    console.log(second)
     //分針
     const minute = now.getMinutes();
     const minuteDegree = (minute % 60) * 6;
