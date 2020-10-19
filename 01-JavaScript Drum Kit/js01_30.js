@@ -13,5 +13,5 @@ function removeTrainsition(e) {
 };
 
 window.addEventListener("keydown", playSound);
-const keys = document.querySelectorAll(".key");
+const keys = Array.from(document.querySelectorAll(".key"));
 keys.forEach(keys => keys.addEventListener("transitionend", removeTrainsition));
