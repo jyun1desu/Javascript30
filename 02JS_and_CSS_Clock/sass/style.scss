@@ -1,17 +1,103 @@
 $background_color:#F9F9F9;
+$clock_size:200px;
 
-body {
-    background-color: $background_color;
+@mixin circle($diameter) {
+    width: $diameter;
+    height: $diameter;
+    border-radius: $diameter/2;
 }
 
-.clock{
-    width: 250px;
-    height: 250px;
-    border-radius: 125px;
-    background-color: #fff;
-    filter: drop-shadow(0 0 2px pink);
+* {
+    // outline: 1px solid lightgrey;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    background-color: $background_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin pointer($color, $width, $blank_space,$longer_height) {
     position: absolute;
-    top:40%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    background-color: $color;
+    width: $width;
+    margin-top: $blank_space;
+    height: ($clock_size/2)-$blank_space+$longer_height;
+    border-radius: $width/2;
+    transform-origin: 0px $clock_size/2-$blank_space;
+}
+
+.clock {
+    @include circle($clock_size);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &__second {
+        @include pointer(#B91616, 2px, 20px,15px);
+        z-index: 4;
+    }
+
+    &__minute {
+        @include pointer(#C1C0BE, 10px, 30px,0px);
+        transform-origin: bottom;
+    }
+
+    &__hour {
+        @include pointer(#F1E8E8, 10px, 50px,0px);
+        transform-origin: bottom;
+    }
+
+    &__axis {
+        @include circle(18px);
+        background-color: pink;
+        position: absolute;
+        align-self: center;
+
+        &::before{
+           content: " ";
+           display: inline-block;
+           @include circle(6px);
+           background-color: #B91616;
+           position: absolute;
+           top:50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+
+        }
+    }
+
+    @mixin indicator($color, $width, $blank_space, $size) {
+        position: absolute;
+        width: $width;
+        border-top: $size solid $color;
+        margin-top: $blank_space;
+        height: ($clock_size/2)-($blank_space+$size);
+        border-radius: $width/2;
+    }
+
+    &__indicator {
+        @include indicator(orange, 2px, 6px, 2px);
+        transform-origin: bottom;
+    }
+
+    &__indicator:nth-of-type(5n) {
+        @include indicator(pink, 2px, 5px, 5px);
+        transform-origin: bottom;
+    }
+}
+
+@for $i from 1 through 60 {
+    section:nth-of-type(#{$i}) {
+        transform: rotateZ(calc(6deg * #{$i}));
+    }
 }
