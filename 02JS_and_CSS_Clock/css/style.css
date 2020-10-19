@@ -12,10 +12,10 @@ body {
   align-items: center;
 }
 
-.clock_a {
-  width: 290px;
-  height: 290px;
-  border-radius: 145px;
+.whole_clock {
+  width: 275px;
+  height: 275px;
+  border-radius: 137.5px;
   background-color: #F7F5F0;
   border: 1px solid #F0EDE6;
   display: flex;

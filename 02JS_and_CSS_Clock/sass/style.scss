@@ -39,8 +39,8 @@ body {
     transition-timing-function: cubic-bezier(0.42, 0, 0.49, 1.54);
 }
 
-.clock_a {
-    @include circle(290px);
+.whole_clock {
+    @include circle(275px);
     background-color: #F7F5F0;
     border: 1px solid #F0EDE6;
     display: flex;

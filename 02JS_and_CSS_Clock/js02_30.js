@@ -21,7 +21,7 @@ function setTime() {
 
     //分針
     const minute = now.getMinutes();
-    const minuteDegree = (minute % 60) * 6;
+    const minuteDegree = (minute % 60) * 6 + (second % 60) * 0.1;
     minutePoint.style.transform = `rotate(${minuteDegree}deg)`;
 
     if (minute === 0) {
