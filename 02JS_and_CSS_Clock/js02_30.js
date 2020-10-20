@@ -7,7 +7,7 @@ function setTime() {
     const now = new Date();
     //秒針
     const second = now.getSeconds();
-    let secondDegree = second * 6;
+    const secondDegree = second * 6;
     secondPoint.style.transform = `rotate(${secondDegree}deg)`;
 
     if (second === 0) {
@@ -17,6 +17,7 @@ function setTime() {
         setTimeout(() => {
             secondPoint.classList.remove('no-transition');
         }, 50)
+
     }
 
     //分針
@@ -47,5 +48,10 @@ function setTime() {
         }, 50)
     }
 }
+function shadowStart(){
+    const startSecond = new Date().getSeconds();
+    secondPoint.style.animationDelay = `-${startSecond}s`;
+}
 
-setInterval(setTime, 1000)
+setInterval(setTime, 1000);
+shadowStart();

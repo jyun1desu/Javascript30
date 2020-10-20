@@ -66,25 +66,32 @@ body {
     inset 0.25rem 0.5rem 1rem rgba($shadow_drak, 0.4),
     inset -2px -2px 5px rgba($shadow_light, 0.4);
 
-    @keyframes little-tick {
+    @keyframes box-shadow-move {
         0% {
-            box-shadow: -5px 0 2px rgba(122, 114, 114, 0.25);
+            box-shadow: 6px 0 2px rgba(122, 114, 114, 0.25);
+        }
+
+        25% {
+            box-shadow: 8px 0 2px rgba(122, 114, 114, 0.25);
         }
 
         50% {
-            box-shadow: 5px 0 2px rgba(122, 114, 114, 0.25);
+            box-shadow: -6px 0 2px rgba(122, 114, 114, 0.25);
+        }
+
+        75% {
+            box-shadow: -8px 0 2px rgba(122, 114, 114, 0.25);
         }
 
         100% {
-            box-shadow: -5px 0 2px rgba(122, 114, 114, 0.25);
+            box-shadow: 6px 0 2px rgba(122, 114, 114, 0.25);
         }
     }
 
     &__second {
         @include pointer(#B91616, 3px, 20px, 15px);
         z-index: 4;
-        box-shadow: 5px 0 2px rgba(122, 114, 114, 0.25);
-        animation: little-tick 60s infinite steps(30);
+        animation: box-shadow-move 60s infinite steps(120);
     }
 
     &__minute {
