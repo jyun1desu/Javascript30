@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 告知網頁使用utf8編碼（中文） -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- viewport語法 -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 設定ie相容模式 -->
+  <title>jyuny1 JS30-02 Clock</title>
+  <!-- 網頁名稱 -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h2>Update CSS Variables with JS</h2>
+
+  <div class="content">
+    <div class="controls">
+      <div class="each_control">
+        <label for="spacing">SPACING</label>
+        <input id="spacing" type="range" name="spacing" step="1" min="0" max="200" value="10" data-sizing="px">
+      </div>
+
+      <div class="each_control">
+        <label for="blur">BLUR</label>
+        <input id="blur" type="range" name="blur" step="1" min="0" max="25" value="10" data-sizing="px">
+      </div>
+      <div class="each_control">
+        <label for="base">BASE COLOR</label>
+        <input id="base" type="color" name="base" value="#c44080">
+      </div>
+    </div>
+
+    <div class="image_area">
+      <img src="./img/lotso.jpg">
+    </div>
+  </div>
+  <script type="text/javascript" src="./js03_30.js"></script>
+
+</body>
+
+</html>
