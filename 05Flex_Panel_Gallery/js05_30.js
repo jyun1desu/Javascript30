@@ -1,7 +1,7 @@
 const panels = Array.from(document.querySelectorAll('.panel'));
-console.log(panels);
 
 function open() {
+    panels.forEach(panel => panel.className);
     this.classList.toggle('open');
 }
 
