@@ -18,17 +18,23 @@ function numberWithCommas(x) {
 
 function displayMatches() {
     const matchArray = findMatches(this.value, cityArray);
-    const addHtml = matchArray.map(place => {
-        const reg = new RegExp(this.value, "gi");
-        const cityName = place.city.replace(reg, `<span class="highlight">${this.value}</span>`);
-        const stateName = place.state.replace(reg, `<span class="highlight">${this.value}</span>`);
-        return `<li>
+    if (!matchArray.length) {
+        const nonText = `<li>
+        <span>Sorry there's is no "<span class="highlight">${this.value}</span>"</span>
+        </li>`;
+        suggestions.innerHTML = nonText;
+    } else {
+        const addHtml = matchArray.map(place => {
+            const reg = new RegExp(this.value, "gi");
+            const cityName = place.city.replace(reg, `<span class="highlight">${this.value}</span>`);
+            const stateName = place.state.replace(reg, `<span class="highlight">${this.value}</span>`);
+            return `<li>
         <span class="city_name">${cityName},${stateName}</span>
         <span class="city_population">${numberWithCommas(place.population)}</span>
         </li>`
-    }).join('');
-    suggestions.innerHTML = addHtml;
-
+        }).join('');
+        suggestions.innerHTML = addHtml;
+    };
 }
 
 const searchInput = document.querySelector('.search');
