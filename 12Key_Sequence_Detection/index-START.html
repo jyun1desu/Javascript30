@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+  <style>
+    html,body{
+      height: 100%;
+    }
+    body{
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    p{
+      font-size: 20px;
+    }
+    kbd{
+      display: inline-block;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid grey;
+      border-radius: 2px;
+      width: 30px;
+      height: 30px;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <p>Press<kbd>&#8593;</kbd>
+    <kbd>&#8593;</kbd>
+    <kbd>&#8595;</kbd>
+    <kbd>&#8595;</kbd>
+    <kbd>&#8592;</kbd>
+    <kbd>&#8594;</kbd>
+    <kbd>&#8592;</kbd>
+    <kbd>&#8594;</kbd>
+    <kbd>a</kbd>
+    <kbd>b</kbd>
+    to see something interesting!</p>
+  <script>
+    let konamiCode = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","a","b"]
+    let typein = []
+    window.addEventListener("keydown", function (e) {
+      typein.push(e.key);
+      typein.splice(-konamiCode.length-1,typein.length-konamiCode.length)
+      if(typein.join("").includes(konamiCode.join(""))){
+        cornify_add();
+      }
+    })
+  </script>
+</body>
+
+</html>
