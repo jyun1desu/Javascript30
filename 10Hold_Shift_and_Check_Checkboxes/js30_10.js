@@ -12,7 +12,6 @@ function handleCheckedbox(e) {
                 checkbox.checked = true;
             }
         });
-
     };
     lastChecked = this
 };
