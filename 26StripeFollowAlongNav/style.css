@@ -113,19 +113,24 @@ nav ul {
     margin-right: 20px;
 }
 
-.courses {
-    min-width: 300px;
+.scenes {
+    min-width: 400px;
 }
 
-.courses li {
+.scenes li {
     padding: 10px 0;
-    display: block;
+    display: flex;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.scenes img {
+    width: 170px;
+    margin-right: 20px;
 }
 
 .dropdown a {
     text-decoration: none;
-    color: #ffc600;
+    color: #c44080;
 }
 
 a.button {
@@ -136,3 +141,7 @@ a.button {
     margin-bottom: 10px;
 }
 
+a.button:hover {
+    background: #F6EFEF;
+    color: #c44080;
+}
