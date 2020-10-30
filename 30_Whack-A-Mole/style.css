@@ -67,3 +67,20 @@ h1 {
 .hole.up .mole {
   top: 0;
 }
+
+button{
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  margin: 0 auto;
+}
+
+button:hover{
+  color: #593623;
+}
+
+button:focus{
+  outline: none;
+}
