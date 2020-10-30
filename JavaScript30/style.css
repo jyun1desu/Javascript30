@@ -1,23 +1,133 @@
-body{
-    padding: 0;
-    margin: 0;
+*{
+    /* outline: 1px solid grey; */
+    color: #343434;
 }
 
-.wrap{
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+.wrap {
     display: flex;
 }
 
-.profile{
+.profile {
     width: 25%;
     height: 100%;
     /* flex-basis: 20%; */
     position: fixed;
     background-color: #F1EAEA;
-    padding: 30px;
     box-sizing: border-box;
 }
 
-.content{
-    margin-right: auto;
+.profile_content{
+    position: absolute;
+    margin: 0 30px;
+    bottom: 15%;
+}
+
+h1 {
+    font-size: 40px;
+    color: #c44080;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+.hashtag {
+    background-color: #ffc600;
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    left: 25%;
+    position: relative;
+    width: 75%;
     height: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.content li {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 30%;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 1px 2px 4px 2px rgba(105, 105, 105, 0.1);
+    font-size: 0;
+
+    transition: all 0.2s;
+    transform-origin: top left;
+}
+
+.day_number {
+    background-color: pink;
+    display: inline-block;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 13px;
+    background-color: #c44080;
+    color: white;
+    position: absolute;
+}
+
+.content li>img,.content li>video {
+    width: 100%;
+}
+
+.information{
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.information h3{
+    margin: 0;
+}
+
+.information .link{
+    display: flex;
+    margin-top: auto;
+}
+
+.link a{
+    flex: 1 1 50%;
+    color: #343434;
+    text-decoration: none;
+    background-color: #F1EAEA;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.link a+a{
+    margin-left: 10px;
+}
+
+.link a:hover{
+    background-color: #c44080;
+    color: white;
+}
+
+.hover-active{
+    transform: scale(1.1);
+    z-index: 1;
 }
