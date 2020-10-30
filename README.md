@@ -1,5 +1,5 @@
 # Javascript30
-|30DAYS|Demo|Note|
+|30DAYS|Demo|
 |----|----|
 |Day01|[Drum Kit](https://jyun1desu.github.io/Javascript30/01_JavaScript-Drum-Kit/)|
 |Day02|[Clock](https://jyun1desu.github.io/Javascript30/02_JS-and-CSS-Clock/)|
