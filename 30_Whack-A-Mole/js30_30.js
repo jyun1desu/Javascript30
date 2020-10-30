@@ -67,8 +67,10 @@ function startGame() {
     scoreBoard.textContent = score;
     timeUp = false;
     peep();
-    timer(20);
-    setTimeout(() => timeUp = true, 20000);
+    timer(10);
+    setTimeout(() => {
+        timeUp = true;
+    }, 10000);
 }
 
 moles.forEach(mole => mole.addEventListener("click", bonk))

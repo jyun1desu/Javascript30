@@ -74,7 +74,7 @@ button{
   background-color: transparent;
   font-family: 'Amatic SC', cursive;
   font-size: 50px;
-  margin: 0 auto;
+  margin: 40px auto 0 auto;
 }
 
 button:hover{
