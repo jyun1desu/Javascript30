@@ -1,6 +1,8 @@
 const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('.score');
 const moles = document.querySelectorAll('.mole');
+const timeDisplay = document.querySelector('.timeLeft')
+let countdown;
 let lastHole;
 let timeUp = false;
 let score = 0;
@@ -13,7 +15,6 @@ function randomHole(holes) {
     const holeIndex = Math.floor(Math.random() * holes.length);
     const hole = holes[holeIndex];
     if (hole === lastHole) {
-        console.log("ohh~~~")
         return randomHole(holes)
     }
     lastHole = hole;
@@ -30,19 +31,44 @@ function peep() {
     }, duration)
 }
 
+function bonk(e) {
+    if (!e.isTrusted) return;
+    score++
+    this.parentNode.classList.remove('up');
+    scoreBoard.textContent = score;
+}
+
+function timer(seconds) {
+    clearInterval(countdown);
+    const now = Date.now();
+    const then = now + seconds * 1000
+    displayTimeLeft(seconds);
+
+    countdown = setInterval(() => {
+        const secondsLeft = ((then - Date.now()) / 1000).toFixed(2);
+        if (secondsLeft < 0) {
+            clearInterval(countdown);
+            return;
+        }
+        displayTimeLeft(secondsLeft);
+    }, 100)
+}
+
+function displayTimeLeft(seconds) {
+    const display = `Time Left: ${seconds<10?"0":""}${seconds}s`
+    timeDisplay.textContent = display
+    if (seconds == 0) {
+        timeDisplay.textContent = "Time Up!"
+    }
+}
+
 function startGame() {
     score = 0
     scoreBoard.textContent = score;
     timeUp = false;
     peep();
-    setTimeout(() => timeUp = true, 10000);
-}
-
-function bonk(e) {
-    if (!e.isTrusted) return;
-    score++ 
-    this.parentNode.classList.remove('up');
-    scoreBoard.textContent = score;
+    timer(20);
+    setTimeout(() => timeUp = true, 20000);
 }
 
 moles.forEach(mole => mole.addEventListener("click", bonk))
