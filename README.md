@@ -27,7 +27,7 @@
 |Day24|[Sticky Nav](https://jyun1desu.github.io/Javascript30/24_Sticky-Nav/)
 |Day25|[EventCapture Propagation BubblingandOnce](https://jyun1desu.github.io/Javascript30/25_EventCapture-Propagation-Bubbling-and-Once/)
 |Day26|[Stripe Follow Along Nav](https://jyun1desu.github.io/Javascript30/26_Stripe-Follow-Along-Nav/)
-|Day27|[Click and Drag](https://jyun1desu.github.io/Javascript30/27_Click-and_Drag/)
+|Day27|[Click and Drag](https://jyun1desu.github.io/Javascript30/27_Click-and-Drag/)
 |Day28|[Video Speed Controller 2](https://jyun1desu.github.io/Javascript30/28_Video-Speed-Controller-2/)
 |Day29|[Countdown Timer](https://jyun1desu.github.io/Javascript30/29_Countdown-Timer/)
 |Day30|[Whack A Mole](https://jyun1desu.github.io/Javascript30/30_Whack-A-Mole/)
