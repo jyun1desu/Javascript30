@@ -75,6 +75,7 @@ button{
   font-family: 'Amatic SC', cursive;
   font-size: 50px;
   margin: 40px auto 0 auto;
+  user-select: none;
 }
 
 button:hover{
@@ -89,5 +90,5 @@ h2{
   font-family: 'Amatic SC', cursive;
   font-size: 50px;
   text-align: center;
-  margin: 0;
+  margin: 30px 0 0 0;
 }

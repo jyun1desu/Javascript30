@@ -58,7 +58,7 @@ function displayTimeLeft(seconds) {
     const display = `Time Left: ${seconds<10?"0":""}${seconds}s`
     timeDisplay.textContent = display
     if (seconds == 0) {
-        timeDisplay.textContent = "Time Up!"
+        timeDisplay.textContent = `Time Up! Your Score is "${score}"`
     }
 }
 
