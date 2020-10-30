@@ -24,7 +24,7 @@
 |Day21|[Geolocation](https://jyun1desu.github.io/Javascript30/21_Geolocation/)
 |Day22|[Follow Along Link Highlighter](https://jyun1desu.github.io/Javascript30/22_Follow-Along-Link-Highlighter/)
 |Day23|[Speech Synthesis](https://jyun1desu.github.io/Javascript30/23_Speech-Synthesis/)
-|Day24|[Sticky Nav](https://jyun1desu.github.io/Javascript30/24_Sticky-Nav/)
+|Day24|[Sticky Nav](https://jyun1desu.github.io/Javascript30/24_Sticky-Nav/index.html)
 |Day25|[EventCapture Propagation BubblingandOnce](https://jyun1desu.github.io/Javascript30/25_EventCapture-Propagation-Bubbling-and-Once/)
 |Day26|[Stripe Follow Along Nav](https://jyun1desu.github.io/Javascript30/26_Stripe-Follow-Along-Nav/)
 |Day27|[Click and Drag](https://jyun1desu.github.io/Javascript30/27_Click-and-Drag/)
