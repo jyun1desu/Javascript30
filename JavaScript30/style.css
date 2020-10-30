@@ -1,0 +1,23 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.wrap{
+    display: flex;
+}
+
+.profile{
+    width: 25%;
+    height: 100%;
+    /* flex-basis: 20%; */
+    position: fixed;
+    background-color: #F1EAEA;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.content{
+    margin-right: auto;
+    height: 1000px;
+}
