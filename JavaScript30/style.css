@@ -15,6 +15,7 @@ body {
 
 .profile {
     width: 25%;
+    min-width: 300px;
     height: 100%;
     /* flex-basis: 20%; */
     position: fixed;
@@ -26,6 +27,29 @@ body {
     position: absolute;
     margin: 0 30px;
     bottom: 15%;
+}
+
+.profile a{
+    display: inline-block;
+    font-size: 0;
+    text-decoration: none;
+}
+
+.profile .fab{
+    margin-right: 10px;
+    font-size: 20px;
+    color: #c44080;
+    vertical-align: middle;
+}
+
+.profile span{
+    font-size: 16px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+.profile span:hover{
+    color: #c44080;
 }
 
 h1 {
@@ -68,7 +92,6 @@ p {
     width: 30%;
     border-radius: 5px;
     margin: 10px;
-    overflow: hidden;
     position: relative;
     box-shadow: 1px 2px 4px 2px rgba(105, 105, 105, 0.1);
     font-size: 0;
@@ -86,6 +109,7 @@ p {
     background-color: #c44080;
     color: white;
     position: absolute;
+    transition: all 0.5s;
 }
 
 .content li>img,.content li>video {
@@ -130,4 +154,8 @@ p {
 .hover-active{
     transform: scale(1.1);
     z-index: 1;
+}
+
+.hover-active h2{
+    transform: scale(1.2);
 }
