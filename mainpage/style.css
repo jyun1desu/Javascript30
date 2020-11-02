@@ -1,0 +1,164 @@
+*{
+    /* outline: 1px solid grey; */
+    color: #343434;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+.wrap {
+    display: flex;
+    min-width: 1000px;
+    min-height: 800px;
+}
+
+.profile {
+    width: 360px;
+    height: 100vh;
+    /* flex-basis: 20%; */
+    position: fixed;
+    background-color: #F1EAEA;
+    box-sizing: border-box;
+}
+
+.profile_content{
+    position: absolute;
+    margin: 0 30px;
+    bottom: 15%;
+}
+
+.profile .link{
+    display: block;
+    font-size: 0;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.profile .fab,.fas{
+    margin-right: 10px;
+    font-size: 20px;
+    color: #c44080;
+    vertical-align: middle;
+}
+
+.profile span{
+    font-size: 16px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+.profile span:hover{
+    color: #c44080;
+}
+
+h1 {
+    font-size: 40px;
+    color: #c44080;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+.hashtag {
+    background-color: #ffc600;
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.content li {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 30%;
+    border-radius: 5px;
+    margin: 10px;
+    position: relative;
+    box-shadow: 1px 2px 4px 2px rgba(105, 105, 105, 0.1);
+    font-size: 0;
+    overflow: hidden;
+
+    transition: all 0.2s;
+    transform-origin: center;
+}
+
+.day_number {
+    background-color: pink;
+    display: inline-block;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 13px;
+    background-color: #c44080;
+    color: white;
+    position: absolute;
+    transition: all 0.2s;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.content li>img,.content li>video {
+    width: 100%;
+}
+
+.information{
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.information h3{
+    margin: 0;
+}
+
+.information .link{
+    display: flex;
+    margin-top: auto;
+}
+
+.link a{
+    flex: 1 1 50%;
+    color: #343434;
+    text-decoration: none;
+    background-color: #F1EAEA;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.link a+a{
+    margin-left: 10px;
+}
+
+.link a:hover{
+    background-color: #c44080;
+    color: white;
+}
+
+.hover-active{
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.hover-active .day_number{
+    transform: scale(1);
+    opacity: 0;
+}
