@@ -25,8 +25,10 @@
                     Bos建立的課程挑戰，主旨為連續30天、每天純JavaScript寫出一個小實作的挑戰。</p>
                 <p>對剛學完基礎JS語法、接觸DOM的JS新手如我，這系列能學到很多有趣的DOM操作（而且操作方法好聰明！）跟各種原生API的應用。每支影片大概都只有10～20分鐘，跟著實作也不會花太久的時間，很建議跟我一樣基礎的人一起來試試看！
                 </p>
-                <a class="link" href="https://github.com/jyun1desu"><i class="fab fa-github"></i><span>My GitHub</span></a>
-                <a class="link" href="https://javascript30.com/"><i class="fas fa-pencil-alt"></i><span>JavaScript30課程</span></a>
+                <a class="link" href="https://github.com/jyun1desu"><i class="fab fa-github"></i><span>My
+                        GitHub</span></a>
+                <a class="link" href="https://javascript30.com/"><i
+                        class="fas fa-pencil-alt"></i><span>JavaScript30課程</span></a>
             </div>
 
         </div>
@@ -253,7 +255,7 @@
                     <img src="img/js28_30.jpg" alt="">
                     <div class="information">
                         <h3>Webcam Fun</h3>
-                        <p>利用原生API製作視訊效果：濾鏡、去除特定區間的顏色等(綠幕)</p>
+                        <p>利用原生API製作視訊效果：截圖、濾鏡、去除特定區間的顏色等(綠幕)</p>
                         <div class="link">
                             <!-- <a href="#">筆記</a> -->
                             <a href="../19_Webcam-Fun/index.html">Demo</a>
@@ -402,34 +404,31 @@
     const content = document.querySelector('.content')
     const courses = document.querySelectorAll('.content li')
     const profile = document.querySelector('.profile')
-    video.forEach(v=>v.removeAttribute('controls'));
-    video.forEach(v=>v.currentTime = 1.5);
-    content.style.marginLeft = `${profile.offsetWidth}px`
-
-    console.log(profile.offsetWidth)
+    video.forEach(v => v.removeAttribute('controls'));
+    video.forEach(v => v.currentTime = 1.5);
 
     function videoPlay() {
         currentVideo = this.querySelector('video');
-        if(currentVideo) currentVideo.play();
+        if (currentVideo) currentVideo.play();
     }
 
     function videoPause() {
         currentVideo = this.querySelector('video');
-        if(currentVideo) currentVideo.pause();
+        if (currentVideo) currentVideo.pause();
     }
 
-    function enlarge(){
+    function enlarge() {
         this.classList.add('hover-active');
     }
 
-    function shrink(){
+    function shrink() {
         this.classList.remove('hover-active');
     }
 
-    courses.forEach(course=>course.addEventListener("mouseenter", videoPlay));
-    courses.forEach(course=>course.addEventListener("mouseleave", videoPause));
-    courses.forEach(course=>course.addEventListener("mouseenter",enlarge));
-    courses.forEach(course=>course.addEventListener("mouseleave",shrink));
+    courses.forEach(course => course.addEventListener("mouseenter", videoPlay));
+    courses.forEach(course => course.addEventListener("mouseleave", videoPause));
+    courses.forEach(course => course.addEventListener("mouseenter", enlarge));
+    courses.forEach(course => course.addEventListener("mouseleave", shrink));
 </script>
 
 </html>

@@ -1,5 +1,5 @@
 *{
-    /* outline: 1px solid grey; */
+    outline: 1px solid grey;
     color: #343434;
 }
 
@@ -10,30 +10,50 @@ body {
 }
 
 .wrap {
-    display: flex;
-    min-width: 1000px;
-    min-height: 800px;
+    display: block;
+}
+
+@media screen and (min-width: 992px){
+    .wrap {
+        display: flex;
+    }
 }
 
 .profile {
-    width: 360px;
-    height: 100vh;
-    /* flex-basis: 20%; */
-    position: fixed;
+    text-align: center;
     background-color: #F1EAEA;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-.profile_content{
-    position: absolute;
-    margin: 0 30px;
-    bottom: 15%;
+@media screen and (min-width: 992px){
+    .profile {
+        width: 25%;
+        height: 100vh;
+        padding: 0;
+        flex-basis: 20%;
+        position: fixed;
+        text-align: left;
+    }
+
+    .profile_content{
+        position: absolute;
+        margin: 0 30px;
+        bottom: 15%;
+    }
+}
+
+
+.profile_content h1{
+    margin: 0;
 }
 
 .profile .link{
     display: block;
     font-size: 0;
     text-decoration: none;
+}
+.profile .link:not(:last-child){
     margin-bottom: 10px;
 }
 
@@ -73,22 +93,20 @@ p {
 }
 
 .content {
-    width: 75%;
-    padding: 20px;
     box-sizing: border-box;
 }
 
 .content ul {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     list-style: none;
+    padding: 0;
 }
 
 .content li {
-    display: flex;
+    display: block;
     flex-direction: column;
     background-color: white;
-    width: 30%;
     border-radius: 5px;
     margin: 10px;
     position: relative;
@@ -99,6 +117,25 @@ p {
     transition: all 0.2s;
     transform-origin: center;
 }
+
+@media screen and (min-width: 992px){
+    .content {
+        width: 75%;
+        position: relative;
+        padding: 0 15px;
+        left: 25%;
+    }
+
+    .content ul {
+        display: flex;
+    }
+
+    .content li {
+        flex: 1 1 30%;
+    }
+}
+
+
 
 .day_number {
     background-color: pink;
